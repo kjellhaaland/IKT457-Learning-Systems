@@ -3,7 +3,7 @@ import random
 from assignment_1.tsetlin import Tsetlin
 
 # List with number of states
-states = [1, 2, 3, 5, 10]
+states = [1, 2, 3, 5, 10, 20, 30, 40, 50, 100, 200, 500, 1000]
 
 # Number of tsetlin automata to be created
 num_la = 5
@@ -12,7 +12,6 @@ num_la = 5
 runs = 100
 
 for s in states:
-
     las = []
     total_results = [0, 0]
 
@@ -42,5 +41,4 @@ for s in states:
 
     total_runs = total_results[0] + total_results[1]
     average_yes = total_results[1] / total_runs
-    print("{} yes and {} no".format(total_results[1], total_results[0]))
-    print("{} total runs with {} yes".format(total_runs, average_yes))
+    print("{} total runs with average {} yes. ({:.2f} yes)".format(total_runs, average_yes, average_yes * num_la))

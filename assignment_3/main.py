@@ -1,7 +1,7 @@
 from dash import Dash, html, dcc, callback, Output, Input
 import plotly.express as px
 
-from Assignments.Assignment_3.matrix import Matrix
+from assignment_3.matrix import Matrix
 
 app = Dash(__name__)
 
@@ -11,7 +11,7 @@ app.layout = html.Div([
     dcc.Graph(id='graph-content'),
 
     html.H4(children='s'),
-    dcc.Slider(1, 25, step=1, value=10, tooltip={'always_visible': False}, id="slider-s"),
+    dcc.Slider(1, 25, marks=None, step=.1, value=10, tooltip={'always_visible': False}, id="slider-s"),
 
     html.H4(children='P(L|Y)'),
     dcc.Slider(0, 1, marks=None, value=.1, tooltip={'always_visible': False}, id="slider-ply"),

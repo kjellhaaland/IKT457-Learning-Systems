@@ -1,0 +1,7 @@
+.vscode
+.venv
+
+# Ignore all pycache folders
+**/__pycache__/
+
+project_experiments/
